@@ -12,7 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('blog.index');
+})->name('/');
+
+Route::get('/about', function () {
+    return view('blog.about');
+})->name('/about');
+
+Route::get('/post', function () {
+    return view('blog.post');
+})->name('/post');
+
+Route::get('/contact', function () {
+    return view('blog.contact');
+})->name('/contact');
 
 Route::get('/help','PostConrtoller@index')->name('help');
